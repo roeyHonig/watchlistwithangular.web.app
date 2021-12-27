@@ -1,0 +1,9 @@
+<h2 *ngIf="mediaItem.original_title">{{ mediaItem.original_title }}</h2>
+<h2 *ngIf="mediaItem.original_name">{{ mediaItem.original_name }}</h2>
+<img src={{mediaItem.poster_path}}>
+<ng-template [ngIf]="mediaItem.watchedOn">
+  <div>Watched on {{ mediaItem.watchedOn | date: 'shortDate' }}</div>
+</ng-template>
+<div>{{ mediaItem.category }}</div>
+<div>{{ mediaItem.release_date | slice:0:4 }}</div>
+<div>{{ mediaItem.rating }}</div>
